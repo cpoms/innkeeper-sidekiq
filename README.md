@@ -1,8 +1,8 @@
-# Apartment::Sidekiq
+# Innkeeper::Sidekiq
 
-[![Gem Version](https://badge.fury.io/rb/apartment-sidekiq.svg)](https://badge.fury.io/rb/apartment-sidekiq)
+[![Gem Version](https://badge.fury.io/rb/innkeeper-sidekiq.svg)](https://badge.fury.io/rb/innkeeper-sidekiq)
 
-Official Support for Sidekiq with the Apartment Gem.
+Official Support for Sidekiq with the Innkeeper Gem.
 
 This gem takes care of storing the current tenant that a job is enqueued within.
 It will then switch to that tenant for the duration of the job processing.
@@ -11,7 +11,7 @@ It will then switch to that tenant for the duration of the job processing.
 
 Add this line to your application's Gemfile:
 
-    gem 'apartment-sidekiq'
+    gem 'innkeeper-sidekiq'
 
 And then execute:
 
@@ -19,13 +19,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install apartment-sidekiq
+    $ gem install innkeeper-sidekiq
 
 ## Usage
 
 That's it. There's nothing to do. Each job that is queued will get an additional entry
-storing `Apartment::Tenant.current` when it is queued. Then when the server pops it,
-it will run job within an `Apartment::Tenant.switch` block.
+storing `Innkeeper::Tenant.current` when it is queued. Then when the server pops it,
+it will run job within an `Innkeeper::Tenant.switch` block.
 
 ## Contributing
 

@@ -1,7 +1,7 @@
-module Apartment::Sidekiq::Middleware
+module Innkeeper::Sidekiq::Middleware
   class Server
     def call(worker_class, item, queue)
-      Apartment::Tenant.switch(item['apartment']) do
+      Innkeeper::Tenant.switch(item['innkeeper']) do
         yield
       end
     end
